@@ -1,0 +1,266 @@
+/* Body et background */
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: url("Pagoda Cherry Sunset copie.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Carte centrale pour la page d'accueil */
+.home-card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.dob-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.dob-circle {
+  padding: 10px;
+  border: 2px solid #ff4d79;
+  border-radius: 45%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  appearance: none;
+}
+
+.dob-circle:hover {
+  transform: scale(1.05);
+  background: rgba(255, 200, 220, 0.5);
+}
+
+.dob-circle option {
+  background: white;
+  color: black;
+}
+
+/* Bouton stylé */
+#validate-btn {
+  margin-top: 10px;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ff4d79, #e6004c);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#validate-btn:hover {
+  background: linear-gradient(135deg, #e6004c, #ff1a55);
+}
+
+/* Message d'erreur */
+.error {
+  color: #ff0000;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hidden { display: none; }
+
+.heart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.heart-img {
+  width: 150px;   /* tu peux ajuster */
+  height: auto;
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+/* Animation pulsation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.birthday-text {
+  margin-top: 20px;
+  font-size: 28px;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+
+  /* Effet machine à écrire */
+  overflow: hidden;       /* cache le texte */
+  white-space: nowrap;    /* pas de retour à la ligne */
+  border-right: 3px solid white; /* curseur */
+  width: 0;               /* point de départ invisible */
+  animation: typing 4s steps(22) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 22ch } /* 22 caractères */
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* Image Hamilton avec gâteau */
+.hamilton-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hamilton-img {
+  width: 200px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hamilton-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.7);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Boutons génériques */
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff4d79;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #e6004c;
+}
+
+/* Cadre vidéo style Korean/Japanese */
+.video-card {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  padding: 15px;
+  border-radius: 20px;
+  border: 2px solid #ff4d79;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.video-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.video-page, .letter-page {
+  display: none;
+}
+
+/* Lettre style verre flou */
+.birthday-message {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 25px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.25); /* transparent white */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.birthday-message p {
+  margin-bottom: 18px;
+}
+
+.birthday-message .final-line {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+}
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  font-size: 24px;
+  color: red;
+  pointer-events: none;
+  animation: floatUp linear forwards;
+  transform-origin: center;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.flower {
+  position: absolute;
+  bottom: 0;
+  font-size: 24px;
+  pointer-events: none;
+  animation: floatUp linear forwards;
+  transform-origin: center;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg) scale(1.5);
+    opacity: 0;
+  }
+}

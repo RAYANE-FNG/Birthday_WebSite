@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyeux Anniversaire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Page Accueil -->
+  <div class="home-page">
+    <div class="home-card">
+      <h2>Entre ta date de naissance :</h2>
+  
+      <div class="dob-container">
+        <select id="day" class="dob-circle">
+          <option value="">Jour</option>
+          <!-- jours auto -->
+          <script>
+            for(let i=1;i<=31;i++){
+              document.write(`<option value="${i.toString().padStart(2,'0')}">${i}</option>`);
+            }
+          </script>
+        </select>
+  
+        <select id="month" class="dob-circle">
+          <option value="">Mois</option>
+          <option value="01">Janvier</option>
+          <option value="02">Février</option>
+          <option value="03">Mars</option>
+          <option value="04">Avril</option>
+          <option value="05">Mai</option>
+          <option value="06">Juin</option>
+          <option value="07">Juillet</option>
+          <option value="08">Août</option>
+          <option value="09">Septembre</option>
+          <option value="10">Octobre</option>
+          <option value="11">Novembre</option>
+          <option value="12">Décembre</option>
+        </select>
+  
+        <select id="year" class="dob-circle">
+          <option value="">Année</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007  ">2007</option>
+        </select>
+      </div>
+  
+      <button class="btn" id="validate-btn">Valider</button>
+      <p id="error-msg" class="error"></p>
+    </div>
+  </div>
+
+  <!-- Page Coeur -->
+<div class="heart-page hidden">
+  <div class="heart-container">
+    <img src="pngtree-smooth-glossy-heart-vector-file-ai-and-png-png-image_4557871.png" alt="heart" class="heart-img">
+  </div>
+
+  <!-- Texte animé -->
+  <h2 class="birthday-text">Happy Birthday Rim</h2>
+
+  <!-- Image de Hamilton avec gâteau -->
+  <div class="hamilton-container">
+    <img src="image.png" alt="Hamilton avec gâteau" class="hamilton-img">
+  </div>
+
+  <button class="btn" onclick="goToVideo()">❤️ Voir la vidéo</button><br>
+  <button class="btn" onclick="goBackToHome()">⬅️ Retour</button>
+  <audio id="song" src="happy-birthday-254480.mp3"></audio>
+</div>
+
+  <!-- Page Vidéo -->
+<div class="video-page">
+  <div class="video-card">
+    <video width="560" controls>
+      <source src="Hailuo_Video_Créer une vidéo cinématographi_455834127894904839.mp4" type="video/mp4">
+      Ton navigateur ne supporte pas la vidéo.
+    </video>
+  </div>
+  <br>
+  <button class="btn" onclick="goToLetter()">📩 Ouvrir la lettre</button><br>
+  <button class="btn" onclick="goBackToHeart()">⬅️ Retour</button>
+</div>
+
+  <!-- Page Lettre -->
+  <div class="letter-page">
+    <div class="birthday-message">
+      <p>
+        To my closest friend, I feel genuinely blessed to have you in my life. 
+        Our friendship is one of those rare gifts that life doesn’t give twice, 
+        and I’m so thankful for all the memories we’ve already created — the chaos, 
+        the laughs, the deep talks, the stupid moments, and all the inside jokes nobody 
+        else would ever understand. You’ve been there in so many moments, and I couldn’t 
+        imagine my life without you in it.
+    </p>
+
+    <p>
+        Today is your day, so listen carefully because I’m about to get poetic: 
+        whatever you ask for, may it come to you. Whatever you wish for, may it 
+        be fulfilled. And whatever you dream of, may it start becoming real — not 
+        just on your birthday, but every single day after.
+    </p>
+
+    <p>
+        You deserve happiness, success, peace, and a whole lot of amazing adventures. 
+        And don’t worry, I’ll be here to annoy you, support you, and laugh with you 
+        through all of them.
+    </p>
+
+    <p class="final-line">
+        🎉 Happy birthday, my friend! 🎉<br>
+        Here’s to more memories, more laughter, and more moments we'll talk about for years.
+    </p>
+    </div>
+    <button class="btn" onclick="goBackToVideo()">⬅️ Retour</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
